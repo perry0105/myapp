@@ -1,5 +1,10 @@
 node {
-    echo 'Hello from myapp!'
+    stage('say hello') {
+        echo 'Hello from myapp!'
+        slackSend (color: '#FFFF00', message: "Hello from jenkins.")
+        slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+    }
+    
     stage('checkout') {
         checkout scm
     }
