@@ -53,6 +53,6 @@ node {
     }
 
     stage('build result') {
-        slackSend(message: "BUILD STATUS: ${buildStatus}")
+        slackSend(message: "BUILD FINISHED!")
     }
 }
