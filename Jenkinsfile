@@ -51,4 +51,8 @@ node {
     stage('packaging') {
         sh "./gradlew bootRepackage -Pprod -x test"
     }
+
+    stage('build result') {
+        slackSend(message: "BUILD STATUS: ${buildStatus}")
+    }
 }
