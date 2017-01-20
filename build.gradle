@@ -36,7 +36,8 @@ bootRepackage {
 }
 
 war {
-
+    baseName = 'myapp'
+    version = '0.5.0'
 }
 
 springBoot {
@@ -120,7 +121,7 @@ description = ''
 
 configurations {
     providedRuntime
-    compile.exclude module: "spring-boot-starter-tomcat"
+//    compile.exclude module: "spring-boot-starter-tomcat"
 }
 
 repositories {
@@ -188,9 +189,11 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter-aop"
     compile "org.springframework.boot:spring-boot-starter-data-jpa"
     compile "org.springframework.boot:spring-boot-starter-security"
-    compile ("org.springframework.boot:spring-boot-starter-web") {
-        exclude module: 'spring-boot-starter-tomcat'
-    }
+    compile ("org.springframework.boot:spring-boot-starter-web") 
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
+//{
+//        exclude module: 'spring-boot-starter-tomcat'
+//    }
     compile "org.springframework.boot:spring-boot-starter-undertow"
     compile "org.springframework.boot:spring-boot-starter-thymeleaf"
     compile "org.springframework.boot:spring-boot-starter-cloud-connectors"
