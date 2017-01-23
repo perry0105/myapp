@@ -26,5 +26,11 @@
 
     <cache alias="com.mycompany.myapp.domain.Book" uses-template="simple"/>
 
+    <cache alias="com.mycompany.myapp.domain.UserSku" uses-template="simple"/>
+
+    <cache alias="com.mycompany.myapp.domain.Sku" uses-template="simple"/>
+
+    <cache alias="com.mycompany.myapp.domain.Sku.userSkus" uses-template="simple"/>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </config>

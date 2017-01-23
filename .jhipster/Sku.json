@@ -1,0 +1,22 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "userSku",
+            "otherEntityName": "userSku",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "sku"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170123013205",
+    "dto": "mapstruct",
+    "service": "serviceClass",
+    "entityTableName": "sku",
+    "pagination": "pagination"
+}
